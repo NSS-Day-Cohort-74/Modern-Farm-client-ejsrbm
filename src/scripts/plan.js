@@ -1,5 +1,8 @@
 const types = ["Soybean", "Corn", "Asparagus", "Wheat", "Potato", "Sunflower"]
 
+
+
+
 export const createPlan = () => {
     const plan = []
 
@@ -30,3 +33,6 @@ const crop = function* () {
     }
 }()
 
+//Loop through each row 6 times and return a plant. Each row should be it's own array.
+//Export createPlan()
+//On main.js, need to store createPlan() value into the yearlyPlan variable
