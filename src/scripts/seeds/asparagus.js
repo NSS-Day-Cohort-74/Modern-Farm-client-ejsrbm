@@ -1,15 +1,14 @@
 
-export const createAsparagus = (type, height, output) => {
+export const createAsparagus = () => {
     const asparagusProperties = {
-    type: type,
-    height: height,
-    output: output
+    type: "Asparagus",
+    height: 24,
+    output: 4
     };
 
     return asparagusProperties
 
 }
-
 
 
 //create the createAsparagus() that will be exported

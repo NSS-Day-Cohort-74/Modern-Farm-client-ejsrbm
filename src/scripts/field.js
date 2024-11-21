@@ -1,4 +1,13 @@
 
+let fieldArray = [];
+
+export const addPlant = () => {
+    fieldArray.push()
+}
+
+export const usePlants = () => {
+    return structuredClone(fieldArray)
+};
 
 //define a variable that does NOT GET EXPORTED that is an empty array
 //define and export the addPlant()

@@ -1,4 +1,7 @@
 
+export const Catalog = () => {
+    
+}
 
 //define and export catalog function
 //create container in index.html

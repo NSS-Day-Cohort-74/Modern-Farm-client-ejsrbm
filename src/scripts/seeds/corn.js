@@ -1,4 +1,14 @@
-
+export const createCorn = () => {
+    const cornArr = []
+    const cornProperties = {
+    type: "Corn",
+    height: 180,
+    output: 6
+    };
+    cornArr.push(cornProperties)
+    cornArr.push(cornProperties)
+    return cornArr
+}
 
 //create the createCorn) that will be exported
 //function should return an object with the properties of type, height, and output. 
