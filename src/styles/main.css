@@ -2,6 +2,16 @@
 
 /*Typography
 --------------------------------------------------------------*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.plant {
+    padding: 20px;
+}
+
 body,
 button,
 input,
@@ -9,8 +19,9 @@ select,
 textarea {
 	color: #404040;
 	font-family: "Comfortaa", Arial, sans-serif;
-	font-size: 14px;
+	font-size: 30px;
 	line-height: 1.5;
+    background-color: #f7e9d0; 
 }
 
 h1,h2,h3,h4,h5,h6 {

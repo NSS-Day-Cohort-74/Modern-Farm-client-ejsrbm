@@ -19,7 +19,7 @@ export const addPlant = (seedObject) => {
 //if seedObject is an ARRAY (CORN) then how do we separate out that array with the array.isarray method. 
 
 export const usePlants = () => {
-    return structuredClone(fieldArray)
+    return [...fieldArray]
 };
 
 //define a variable that does NOT GET EXPORTED that is an empty array
