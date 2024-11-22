@@ -2,7 +2,9 @@ import { createPlan } from "./plan.js"
 import { createAsparagus } from "./seeds/asparagus.js"
 import { createCorn } from "./seeds/corn.js"
 import { plantSeeds } from "./tractor.js"
-import { usePlants } from "./field.js"
+import { addPlant, usePlants } from "./field.js"
+import { harvestPlants } from "./harvester.js"
+import { Catalog } from "./catalog.js"
 
 console.log("Welcome to the main module")
 
@@ -17,8 +19,14 @@ console.log(asparagusSeed)
 const cornSeed = createCorn()
 console.log(cornSeed)
 
-console.log(plantSeeds(yearlyPlan))
-console.log(usePlants(plantSeeds(yearlyPlan)))
+plantSeeds(yearlyPlan)
+
+let testUsePlants = usePlants()
+console.log(testUsePlants)
+
+const harvestedPlants = harvestPlants(testUsePlants)
+console.log(harvestedPlants)
+console.log(Catalog(harvestedPlants))
 
 //import createPlan() from plan.js
 //create yearlyPlan variable to store return values from createPlan()

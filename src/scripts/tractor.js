@@ -6,25 +6,30 @@ import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
 import { addPlant } from "./field.js"
 
+
 export const plantSeeds = (yearlyPlanVar) => {
-    for (let row; row<yearlyPlanVar.length; row += 1 ) {
-        for (const plant of yearlyPlanVar[row]) {
-            if( plant === "Asparagus" ){
-                addPlant(row, createAsparagus())
-             } else if (plant === "Corn") {
-                addPlant(row, createCorn())
-             } else if (plant === "Potato") {
-               addPlant(row, createPotato())
-             } else if (plant === "Soybean") {
-                addPlant(row, createSoybean())
-             } else if (plant === "Sunflower") {
-                addPlant(row, createSunflower())
-             } else { 
-                addPlant(row, createWheat())
-             }
-            }
-    } //may need to add back a return statement
+  let seedObject = []
+  for (const childArray of yearlyPlanVar) {
+     for (const plant of childArray) {
+        if (plant === "Asparagus") {
+           seedObject.push(createAsparagus())
+        } else if (plant === "Corn") {
+           seedObject.push(createCorn())
+        } else if (plant === "Potato") {
+           seedObject.push(createPotato())
+        } else if (plant === "Soybean") {
+           seedObject.push(createSoybean())
+        } else if (plant === "Sunflower") {
+           seedObject.push(createSunflower())
+        } else {
+           seedObject.push(createWheat())
+        }
+     }
+  }
+  //console.log(seedObject)
+  addPlant(seedObject);
 }
+
 
 //define and export plantSeeds(yearlyPlan)
         //How do we iterate through parent and child arrays?
