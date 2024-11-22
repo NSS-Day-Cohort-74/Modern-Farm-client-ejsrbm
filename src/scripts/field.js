@@ -1,8 +1,12 @@
 
 let fieldArray = [];
 
-export const addPlant = () => {
-    fieldArray.push()
+export const addPlant = (row, seedObject) => {
+    
+    //Is this row already added to fieldArray?
+        //if not create a new index/child
+        //if it does exist, push the plant into the child array of field array
+        //if seedobject is an ARRAY (CORN) then how do we seperate out that array with the array.isarray method. 
 }
 
 export const usePlants = () => {
@@ -16,3 +20,5 @@ export const usePlants = () => {
 //define and export usePlant which is a copy of the array stored in the variable
 
 //import tractor plants array into the field module
+
+console.log(addplant) 

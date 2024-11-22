@@ -7,24 +7,23 @@ import { createWheat } from "./seeds/wheat.js"
 import { addPlant } from "./field.js"
 
 export const plantSeeds = (yearlyPlanVar) => {
-    const seedsToPlantArray = []
-    for (const childArray of yearlyPlanVar) {
-        for (const plant of childArray) {
+    for (let row; row<yearlyPlanVar.length; row += 1 ) {
+        for (const plant of yearlyPlanVar[row]) {
             if( plant === "Asparagus" ){
-                seedsToPlantArray.push(createAsparagus())
+                addPlant(row, createAsparagus())
              } else if (plant === "Corn") {
-                seedsToPlantArray.push(createCorn())
+                addPlant(row, createCorn())
              } else if (plant === "Potato") {
-               seedsToPlantArray.push(createPotato())
+               addPlant(row, createPotato())
              } else if (plant === "Soybean") {
-                seedsToPlantArray.push(createSoybean())
+                addPlant(row, createSoybean())
              } else if (plant === "Sunflower") {
-                seedsToPlantArray.push(createSunflower())
+                addPlant(row, createSunflower())
              } else { 
-                seedsToPlantArray.push(createWheat())
+                addPlant(row, createWheat())
              }
             }
-    } return seedsToPlantArray
+    } //may need to add back a return statement
 }
 
 //define and export plantSeeds(yearlyPlan)
