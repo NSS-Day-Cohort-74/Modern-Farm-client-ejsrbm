@@ -2,7 +2,7 @@ import { createPlan } from "./plan.js"
 import { createAsparagus } from "./seeds/asparagus.js"
 import { createCorn } from "./seeds/corn.js"
 import { plantSeeds } from "./tractor.js"
-import { addPlant, usePlants } from "./field.js"
+import { usePlants } from "./field.js"
 import { harvestPlants } from "./harvester.js"
 import { Catalog } from "./catalog.js"
 

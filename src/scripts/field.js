@@ -17,9 +17,9 @@ export const addPlant = (seedObject) => {
 //if not create a new index/child
 //if it does exist, push the plant into the child array of field array
 //if seedObject is an ARRAY (CORN) then how do we separate out that array with the array.isarray method. 
-
 export const usePlants = () => {
-    return [...fieldArray]
+    let sortedArray = [...fieldArray].sort((a,b) => a.type.localeCompare(b.type))
+    return sortedArray
 };
 
 //define a variable that does NOT GET EXPORTED that is an empty array
