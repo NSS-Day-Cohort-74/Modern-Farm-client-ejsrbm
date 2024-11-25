@@ -3,7 +3,8 @@ export const createCorn = () => {
     const cornProperties = {
     type: "Corn",
     height: 180,
-    output: 6
+    output: 6,
+    icon: "🌽",
     };
     cornArr.push(cornProperties)
     cornArr.push(cornProperties)
