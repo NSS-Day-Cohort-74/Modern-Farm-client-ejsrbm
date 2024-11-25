@@ -1,22 +1,34 @@
-import {harvestPlants} from './harvester.js'
-
-let barnWarehouse = harvestPlants()
-
-export const barn = (barnWarehouse) => {
-    for (const storedFood of barnWarehouse) {
-       console.log(barnWarehouse.pop())
+export const barn = () => {
+    return {
+        crops: [],
+        push: function (crop){
+            crop.push(crop);
+        },
+        pop: function () {
+            return crops.pop();
+        },
+        peek: function () {
+            return crops[this.crops.length - 1].type;
+        },
+        isEmpty: function () {
+            return crops.length === 0
+        }
+        
     }
-    
-
-
-
 }
 
+//what behaviors does the barn have?
+    //put something in the barn (push into the barn)
+    //pop something out of the barn
+    //is the barn empty or not?
+    //
+
+
+
+
 /*
-    //Need a for of loop that is going through the harvestedFood
-        //for of loop is stacking each object into the barnWarehouse array
-    //after everything is added to barnWarehouse we .pop the last object to the processingFacility
-    //another for of loop that pops off the last item in barnWarehouse and does so until the array is empty
+    Create objects that have both properties methods (push and pop) stored in it.
+
 
 
 

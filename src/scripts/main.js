@@ -5,6 +5,7 @@ import { plantSeeds } from "./tractor.js"
 import { usePlants } from "./field.js"
 import { harvestPlants } from "./harvester.js"
 import { Catalog } from "./catalog.js"
+import { barn } from "./storageBarn.js"
 
 console.log("Welcome to the main module")
 
@@ -27,6 +28,16 @@ console.log(testUsePlants)
 const harvestedPlants = harvestPlants(testUsePlants)
 console.log(harvestedPlants)
 console.log(Catalog(harvestedPlants))
+
+
+let storageBarn = barn()
+
+for (let crop of harvestedPlants) {
+    storageBarn.push(crop)
+}
+console.log(barn(crop))
+
+//forof loop to push into the barn
 
 //import createPlan() from plan.js
 //create yearlyPlan variable to store return values from createPlan()
