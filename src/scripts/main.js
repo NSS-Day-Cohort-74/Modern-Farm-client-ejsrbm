@@ -35,6 +35,9 @@ for (let crop of harvestedPlants) {
     storageBarn.push(crop)
 }
 console.log(storageBarn)
+console.log(storageBarn.pop())
+console.log(storageBarn.peek())
+console.log(storageBarn.isEmpty())
 
 //forof loop to push into the barn
 
