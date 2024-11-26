@@ -2,16 +2,16 @@ export const barn = () => {
     return {
         crops: [],
         push: function (crop){
-            crop.push(crop);
+            this.crops.push(crop);
         },
         pop: function () {
-            return crops.pop();
+            return this.crops.pop();
         },
         peek: function () {
-            return crops[this.crops.length - 1].type;
+            return this.crops[this.crops.length - 1].type;
         },
         isEmpty: function () {
-            return crops.length === 0
+            return this.crops.length === 0
         }
         
     }

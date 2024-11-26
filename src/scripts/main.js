@@ -31,11 +31,10 @@ console.log(Catalog(harvestedPlants))
 
 
 let storageBarn = barn()
-
 for (let crop of harvestedPlants) {
     storageBarn.push(crop)
 }
-console.log(barn(crop))
+console.log(storageBarn)
 
 //forof loop to push into the barn
 
